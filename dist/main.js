@@ -1,1 +1,1 @@
-console.log("Hello, World!");
+(()=>{const e=document.querySelector("#content"),t=document.querySelector("#result");document.querySelector("#submit").addEventListener("click",(()=>{let e=document.querySelector("#input");console.log(e.value);let n=e.value;e.value="",fetch(`https://api.openweathermap.org/data/2.5/weather?q=${n}&APPID=286ad37fbe1d2e8922f0ff8a0e3c30f4`).then((function(e){return e.json()})).then((function(e){console.log(e.main.temp);let n=Math.round(e.main.temp-273);t.textContent="Result: "+n+"deg Celcius"}))})),e.appendChild(div)})();
